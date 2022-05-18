@@ -32,7 +32,7 @@ for (let i = 0; i < cells.length; i++) {
 		check_winner();
 	})
 }
-test pareggio
+// test pareggio
 function checkPair(array) {
 	for (let i = 0; i < array.length; i++) {
 		let el = array[i];
