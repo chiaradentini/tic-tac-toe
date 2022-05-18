@@ -34,12 +34,12 @@ for (let i = 0; i < cells.length; i++) {
 }
 // test pareggio
 // function checkPair(array) {
-//   for (let i = 0; i < array.length; i++) {
-//     let el = array[i];
-//     if (el.innerHTML == '' && i >= array.length - 1) {
-//       return alert('Avete pareggiato !!')
-//     }
-//   }
+// 	for (let i = 0; i < array.length; i++) {
+// 		let el = array[i];
+// 		if (el.innerHTML == '' && i >= array.length - 1) {
+// 			return alert('Avete pareggiato !!')
+// 		}
+// 	}
 // }
 
 
