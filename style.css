@@ -21,6 +21,12 @@ body {
     font-size: 40px;
 }
 
+#turno {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
 .grid-container {
     display: grid;
     min-height: 65vh;

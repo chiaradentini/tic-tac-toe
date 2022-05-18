@@ -1,7 +1,7 @@
 var cells = document.querySelectorAll('.cell');
 var player;
 var playerName;
-var cpuName = 'Mio Cugino'
+var cpuName = 'COMPUTER'
 var cpuSign;
 var turn = false
 var new_array = [];
@@ -21,7 +21,7 @@ for (let i = 0; i < cells.length; i++) {
 					setTimeout(() => {
 						cpu_cel.innerHTML = cpuSign;
 						getTurn(playerName)
-					}, 1500);
+					}, 1000);
 					new_array[cel_random] = cpuSign
 					f = false;
 				} else {
@@ -33,14 +33,14 @@ for (let i = 0; i < cells.length; i++) {
 	})
 }
 // test pareggio
-function checkPair(array) {
-	for (let i = 0; i < array.length; i++) {
-		let el = array[i];
-		if (el.innerHTML == '' && i >= array.length - 1) {
-			return alert('Avete pareggiato !!')
-		}
-	}
-}
+// function checkPair(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     let el = array[i];
+//     if (el.innerHTML == '' && i >= array.length - 1) {
+//       return alert('Avete pareggiato !!')
+//     }
+//   }
+// }
 
 
 function randomNumber(num) {
@@ -66,8 +66,8 @@ function check_winner() {
 		if (new_array[a] && new_array[b] == new_array[a] && new_array[c] == new_array[b]) {
 			console.log(new_array[a]);
 			setTimeout(() => {
-				alert(`ha vinto il ${new_array[a]}`)
-			}, 1500);
+				alert(`ha vinto ${new_array[a]}`)
+			}, 1000);
 			return true;
 		}
 	}
