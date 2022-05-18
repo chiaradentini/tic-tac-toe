@@ -5,43 +5,40 @@ var cpuName = 'COMPUTER'
 var cpuSign;
 var turn = false
 var new_array = [];
+var count = 0;
 choseSign()
 for (let i = 0; i < cells.length; i++) {
 	let cel = cells[i];
 	cel.addEventListener('click', function () {
 		if (cel.innerHTML == '') {
 			cel.innerHTML = player;
+			count++;
 			new_array[i] = player;
 			let f = true;
-			while (f == true) {
-				let cel_random = randomNumber(cells.length);
-				var cpu_cel = cells[cel_random];
-				if (cel_random !== i && cpu_cel.innerHTML == '') {
-					getTurn(cpuName)
-					setTimeout(() => {
-						cpu_cel.innerHTML = cpuSign;
-						getTurn(playerName)
-					}, 1000);
-					new_array[cel_random] = cpuSign
-					f = false;
-				} else {
-					f = true;
+			if (count == 9) {
+				alert('hai pareggiato')
+			} else {
+				while (f == true) {
+					let cel_random = randomNumber(cells.length);
+					var cpu_cel = cells[cel_random];
+					if (cel_random !== i && cpu_cel.innerHTML == '') {
+						getTurn(cpuName)
+						setTimeout(() => {
+							cpu_cel.innerHTML = cpuSign;
+							count++;
+							getTurn(playerName)
+						}, 1000);
+						new_array[cel_random] = cpuSign
+						f = false;
+					} else {
+						f = true;
+					}
 				}
 			}
 		}
 		check_winner();
 	})
 }
-// test pareggio
-// function checkPair(array) {
-// 	for (let i = 0; i < array.length; i++) {
-// 		let el = array[i];
-// 		if (el.innerHTML == '' && i >= array.length - 1) {
-// 			return alert('Avete pareggiato !!')
-// 		}
-// 	}
-// }
-
 
 function randomNumber(num) {
 	return Math.floor(Math.random() * num)
