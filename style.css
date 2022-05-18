@@ -8,6 +8,7 @@ body {
 .hero-container {
     display: grid;
     grid-template-columns: 70vh;
+    grid-template-rows: 1fr;
     justify-content: center;
     justify-items: center;
     background-image: url(img/bg01.jpg);
